@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DomainHunt - Find your perfect domain instantly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>DomainHunt</h1>
+        <p class="tagline">Find your perfect domain instantly</p>
+    </header>
+
+    <main>
+        <div class="search-section">
+            <input type="text" id="search-input" placeholder="Enter your domain name">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div class="filters-section">
+            <button class="tld-btn active" data-tld=".com">.com</button>
+            <button class="tld-btn" data-tld=".net">.net</button>
+            <button class="tld-btn" data-tld=".io">.io</button>
+            <button class="tld-btn" data-tld=".co">.co</button>
+            <button class="tld-btn" data-tld=".org">.org</button>
+            <button class="tld-btn" data-tld=".info">.info</button>
+            <button class="tld-btn" data-tld=".dev">.dev</button>
+        </div>
+
+        <div id="loading" hidden>Checking availability...</div>
+        <div id="empty-state" hidden>No available domains found.</div>
+        <div id="results-container"></div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
