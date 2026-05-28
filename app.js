@@ -15,11 +15,11 @@ searchInput.addEventListener('keypress', (e) => {
 });
 
 async function performSearch() {
-    // Get input value: trim, lowercase, letters only
+    // Get input value: trim, lowercase, letters, numbers, and hyphens only
     const word = searchInput.value
         .trim()
         .toLowerCase()
-        .replace(/[^a-z]/g, '');
+        .replace(/[^a-z0-9-]/g, '');
 
     // If empty, do nothing
     if (!word) return;
